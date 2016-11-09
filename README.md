@@ -18,14 +18,14 @@ The files are merged into the one PDF file. App allows on connect with Dropbox a
 
  **Window with authorization option of Dropbox account:**
 
-![DropPDF1](https://s12.postimg.org/o404w91wt/Author.png?style=centerme)
+![DropPDF1](https://s12.postimg.org/o404w91wt/Author.png)
 
  **Manager files from Dropbox drive:**
 
-![DropPDF2](https://s12.postimg.org/hsuxfu0od/Menedzer_Drop_PDF.png?style=centerme)
+![DropPDF2](https://s12.postimg.org/hsuxfu0od/Menedzer_Drop_PDF.png)
 
  **Main window with merge option of files:**
 
-![DropPDF3](https://s12.postimg.org/dig9k8vl9/Drop_PDF.png?style=centerme)
+![DropPDF3](https://s12.postimg.org/dig9k8vl9/Drop_PDF.png)
 
 
