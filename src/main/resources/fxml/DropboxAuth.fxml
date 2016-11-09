@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="aPaneMainView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="380.0" minWidth="550.0" prefHeight="340.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdf.drop.controllers.ControllerAuth">
+    <children>
+        <Pane fx:id="paneConnectLabel" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="background-bottom" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <Label layoutX="5.0" layoutY="4.0" prefHeight="20.0" prefWidth="550.0" text="Połącz aplikację z kontem Dropbox" textAlignment="CENTER" textFill="#003d61">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets left="5.0" />
+                    </opaqueInsets>
+                </Label>
+            </children>
+        </Pane>
+        <MenuBar fx:id="menuBarMainView" layoutY="2.0" prefHeight="25.0" prefWidth="742.0" styleClass="background-top" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Plik">
+                    <items>
+                        <MenuItem fx:id="menuItemImport" mnemonicParsing="false" onAction="#menuItemImportAction" text="Imporuj" />
+                        <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#menuItemCloseAction" text="Zamknij" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pomoc">
+                    <items>
+                        <MenuItem fx:id="menuItemHelp" mnemonicParsing="false" onAction="#menuItemHelpAction" text="O Autoryzacji" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="aPaneShareView" layoutX="7.0" layoutY="300.0" prefHeight="25.0" prefWidth="750.0" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="aPaneDropbox" layoutX="344.0" layoutY="-25.0" maxHeight="35.0" minHeight="25.0" prefHeight="25.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <TextField fx:id="textFieldDropbox" prefHeight="25.0" prefWidth="545.0" promptText="Wklej wygenerowany kod autoryzacyjny" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="145.0" />
+                        <Pane fx:id="paneDropboxButtons" layoutX="581.0" layoutY="100.0" prefHeight="30.0" prefWidth="145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Button fx:id="buttonCancel" layoutX="75.0" layoutY="5.0" mnemonicParsing="false" onAction="#buttonCancelAction" prefHeight="25.0" prefWidth="65.0" styleClass="button-blue" stylesheets="@../styles/droppdfstylesheets.css" text="Zamknij">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                                <Button fx:id="buttonSave" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#buttonSaveAction" prefHeight="25.0" prefWidth="65.0" styleClass="button-blue" stylesheets="@../styles/droppdfstylesheets.css" text="Zapisz">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                            </children>
+                        </Pane>
+                        <ImageView fx:id="imageViewDropbox" fitHeight="25.0" fitWidth="27.0" layoutX="6.0" layoutY="-2.0" onMouseClicked="#imageViewDropboxClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                            <image>
+                                <Image url="@../images/dropboxlogo.png" />
+                            </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="aPaneFinformation" layoutX="-56.0" layoutY="386.0" prefHeight="25.0" prefWidth="200.0" styleClass="background-bottom" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label fx:id="labelDropbox" layoutY="4.0" minWidth="300.0" prefHeight="25.0" prefWidth="750.0" text="Dropbox: brak autoryzacji" textFill="#00000099" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            </children>
+        </AnchorPane>
+        <Pane layoutX="14.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" styleClass="background" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+            <children>
+                <Label layoutX="39.0" layoutY="45.0" text="Krok 1. Stwórz aplikację lub pobierz dane z konta Dropbox:" textFill="#8a8a8a">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="hyperLinkDropboxWebsite" layoutX="85.0" layoutY="72.0" onMouseClicked="#hyperLinkDropboxWebsiteClicked" text="https://www.dropbox.com/developers/apps" />
+                <Label layoutX="39.0" layoutY="103.0" text="Krok 2. Wprowadź klucz oraz hasło z konta Dropbox:" textFill="#8a8a8a">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="118.0" layoutY="137.0" text="Klucz:" />
+                <Label layoutX="117.0" layoutY="170.0" text="Hasło:" />
+                <TextField fx:id="textFieldKey" layoutX="181.0" layoutY="133.0" onKeyReleased="#textFieldKeyTextReleased" onMouseClicked="#textFieldKeyTextClicked" prefHeight="25.0" prefWidth="239.0" />
+                <TextField fx:id="textFieldPass" layoutX="181.0" layoutY="166.0" onKeyReleased="#textFieldPassReleased" onMouseClicked="#textFieldPassClicked" prefHeight="25.0" prefWidth="239.0" />
+                <Label layoutX="37.0" layoutY="204.0" text="Krok 3. Dokonaj autoryzacji przy pomocy poniższego  odsyłacza:" textFill="#8a8a8a">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="hyperlinkDropboxAuthLink" layoutX="88.0" layoutY="234.0" onMouseClicked="#hyperlinkDropboxAuthLinkClicked" text="Wykonaj krok 2..." />
+                <CheckBox fx:id="checkBoxAuthor" layoutX="39.0" layoutY="9.0" mnemonicParsing="false" onAction="#checkBoxAuthorAction" text="Autoryzacja przy pomocy klucza i hasła" />
+                <Separator layoutX="38.0" layoutY="34.0" prefHeight="0.0" prefWidth="476.0" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

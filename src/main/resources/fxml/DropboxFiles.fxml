@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="aPaneMainView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="340.0" minWidth="550.0" prefHeight="340.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdf.drop.controllers.ControllerFiles">
+    <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="background-bottom" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label layoutX="5.0" layoutY="4.0" prefHeight="20.0" prefWidth="550.0" text="Wybierz katalog i zapisz plik" textAlignment="CENTER" textFill="#003d61">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="5.0" />
+               </opaqueInsets>
+            </Label>
+            <Button layoutX="500.0" layoutY="5.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="button-plus" stylesheets="@../styles/droppdfstylesheets.css" />
+            <Button layoutX="525.0" layoutY="5.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" styleClass="button-minus" stylesheets="@../styles/droppdfstylesheets.css" />
+            <ImageView fx:id="imageViewNewFolder" fitHeight="20.0" fitWidth="20.0" layoutX="500.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/plus.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imageViewDeleteFolder" fitHeight="20.0" fitWidth="20.0" layoutX="525.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minus.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imageViewBack" fitHeight="20.0" fitWidth="20.0" layoutX="475.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imageViewHome" fitHeight="20.0" fitWidth="20.0" layoutX="452.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" styleClass="background" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <ListView id="listView" fx:id="listViewDrop" layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0" prefWidth="550.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ListView>
+         </children>
+      </Pane>
+        <MenuBar fx:id="menuBarMainView" layoutY="2.0" prefHeight="25.0" prefWidth="742.0" styleClass="background-top" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Pomoc">
+                    <items>
+                        <MenuItem fx:id="menuItemHelp" mnemonicParsing="false" onAction="#menuItemHelp" text="O wysyłaniu" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="aPaneShareView" layoutX="7.0" layoutY="300.0" prefHeight="25.0" prefWidth="750.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="aPaneDropbox" layoutX="344.0" layoutY="-25.0" maxHeight="35.0" minHeight="25.0" prefHeight="25.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <TextField fx:id="textFieldDropbox" onKeyPressed="#textFieldDropboxKeyPressed" prefHeight="25.0" prefWidth="545.0" promptText="SplitDocument.pdf" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="145.0" />
+                        <Pane fx:id="paneDropboxButtons" layoutX="581.0" layoutY="100.0" prefHeight="30.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Button fx:id="buttonClose" layoutX="80.0" layoutY="5.0" mnemonicParsing="false" onAction="#buttonCloseAction" prefHeight="25.0" prefWidth="65.0" styleClass="button-blue" stylesheets="@../styles/droppdfstylesheets.css" text="Zamnkij">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                                <Button fx:id="buttonSave" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#buttonSaveAction" prefHeight="25.0" prefWidth="65.0" styleClass="button-blue" stylesheets="@../styles/droppdfstylesheets.css" text="Zapisz">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                            </children>
+                        </Pane>
+                  <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="6.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../images/dropboxlogo.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="aPaneFinformation" layoutX="-56.0" layoutY="386.0" prefHeight="25.0" prefWidth="200.0" styleClass="background-bottom" stylesheets="@../styles/droppdfstylesheets.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label fx:id="labelLocalization" layoutY="4.0" minWidth="300.0" prefHeight="25.0" prefWidth="750.0" text="Dropbox lokalizacja: folder główny" textFill="#00000099" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

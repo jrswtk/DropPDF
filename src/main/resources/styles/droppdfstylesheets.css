@@ -1,0 +1,108 @@
+.background {
+    -fx-background-color: #f2f2f2;
+}
+
+.background-bottom {
+    -fx-background-color: #808080;
+}
+
+.background-top {
+    -fx-background-color: #0040ff;
+}
+
+.menu:hover {
+    -fx-background-color: #808080;
+}
+
+.menu-item:focused {
+    -fx-background-color: #808080;
+    -fx-text-fill: #0040ff;
+}
+
+.table-image{
+    -fx-background-image: url("../images/pdftableimagebg.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 235 302;
+    -fx-background-position: center center;
+}
+
+.table-view {
+    -fx-background-color: #f2f2f2;
+    -fx-table-cell-border-color: #f2f2f2;
+    -fx-table-header-border-color: #f2f2f2;
+}
+
+.table-row-cell{
+    -fx-background-color: #f2f2f2;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #808080;
+    -fx-table-cell-border-color: #808080;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+
+.table-view .column-header .label {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-opacity: 1;
+}
+
+.list-view, .list-cell {
+    -fx-background-color: #f2f2f2;
+}
+
+.list-cell:selected {
+    -fx-background-color: #0040ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.tree-view, .tree-cell {
+    -fx-background-color: #f2f2f2;
+    -fx-padding: 0;
+}
+
+.tree-cell:expanded, .tree-cell:sub-tree-item {
+    -fx-background-color: #CFCFCF;
+}
+
+.tree-cell:selected {
+    -fx-background-color: #0040ff;
+    -fx-font-weight: bold;
+}
+
+.button-blue {
+    -fx-border-color: transparent;
+    -fx-background-color: #0040ff;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.blue-text {
+    -fx-font-family: "Arial";
+    -fx-text-fill: #0040ff;
+}
+
+.button-plus {
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: #808080;	
+}
+
+.button-minus {
+    -fx-background-size: 20 20;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: #808080;	
+}
+
+.progress-bar {
+  -fx-control-inner-background: #0040ff;
+}
