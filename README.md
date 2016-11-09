@@ -3,7 +3,7 @@
 DropPDF is a app, which was created to merge files:
 
 * JPG, GIF, PNG
-* DOC, DOCX,
+* DOC, DOCX
 * PDF
 
 The files are merged into the one PDF file. App allows on connect with Dropbox account. Connection with Dropbox allows on upload of PDF files. After uploading the files, they can be sharing by auto generated links. DropPDF includes manager file to manage resources on Dropbox drive.
