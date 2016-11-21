@@ -1,14 +1,14 @@
 # DropPDF:
 
-DropPDF is a app, which was created to merge files:
+DropPDF is a program which was created to merge files:
 
 * JPG, GIF, PNG
 * DOC, DOCX
 * PDF
 
-The files are merged into the one PDF file. App allows on connect with Dropbox account. Connection with Dropbox allows on upload of PDF files. After uploading the files, they can be sharing by auto generated links. DropPDF includes manager file to manage resources on Dropbox drive.
+The files are merged into the one PDF file. App allows on connect with Dropbox account. Connection with Dropbox allows on upload of PDF files. The uploaded files can be shared by the automatically generated links. DropPDF includes manager file to managing resources on Dropbox drive.
 
-### Uses tehcnologies:
+### Technologies:
 
 * Java 8
 * JavaFX 
@@ -24,7 +24,7 @@ The files are merged into the one PDF file. App allows on connect with Dropbox a
 
 ![DropPDF2](https://s12.postimg.org/hsuxfu0od/Menedzer_Drop_PDF.png)
 
- **Main window with merge option of files:**
+ **Main window with option of files merging:**
 
 ![DropPDF3](https://s12.postimg.org/dig9k8vl9/Drop_PDF.png)
 
