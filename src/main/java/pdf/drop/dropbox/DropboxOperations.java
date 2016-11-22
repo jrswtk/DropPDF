@@ -47,11 +47,9 @@ public class DropboxOperations {
                 if (metadata.getName().endsWith(".pdf")
                         || metadata.getName().endsWith(".PDF")) {
 
-                    String part1 = metadata.getName().substring(
-							0,
+                    String part1 = metadata.getName().substring(0,
                             metadata.getName().length() - ".pdf".length());
-                    String part2 = fileName.substring(
-							0,
+                    String part2 = fileName.substring(0,
                             fileName.length() - ".pdf".length());
 
                     if (part1.equalsIgnoreCase(part2)) {

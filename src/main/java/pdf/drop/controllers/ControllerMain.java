@@ -281,15 +281,10 @@ public class ControllerMain implements Initializable {
             return;
         }
         if(!new File(FilePath.TEMP_MERGE_PDF).exists()) {
-            AppAlert.showAndWaitAlert(AlertEnum.FILE_CAN_NOT_BE_SEND);
+            AppAlert.showAndWaitAlert(AlertEnum.FILE_CAN_NOT_BE_SENT);
             return;
         }
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                Main.getScene().setCursor(Cursor.WAIT);
-            }
-        });
+        Platform.runLater(() -> Main.getScene().setCursor(Cursor.WAIT));
         
         Task<Void> task = new Task<Void>() {
             @Override

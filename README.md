@@ -16,6 +16,7 @@ The files are merged into the one PDF file. App allows on connect with Dropbox a
 * iText
 * Maven
 
+
  **Window with authorization option of Dropbox account:**
 
 ![DropPDF1](https://s12.postimg.org/o404w91wt/Author.png)

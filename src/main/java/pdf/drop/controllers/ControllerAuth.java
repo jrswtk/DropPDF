@@ -218,7 +218,7 @@ public class ControllerAuth implements Initializable {
         return file;
     }
 
-    private boolean peformAuthorized() throws IOException, ClassNotFoundException {
+    private boolean peformAuthorized() throws IOException, ClassNotFoundException, NoSuchPaddingException {
         if (!textFieldDropbox.getText().equals("")) {
             userAuth = textFieldDropbox.getText();
 			
@@ -235,7 +235,6 @@ public class ControllerAuth implements Initializable {
                 String tokens = null;
                 try {
                     tokens = AppCipher.encrytpTokens(userAuth);
-                } catch (NoSuchPaddingException ex) {
                 } catch (UnsupportedEncodingException ex) {
                 } catch (InvalidKeyException ex) {
                 } catch (IllegalBlockSizeException ex) {
